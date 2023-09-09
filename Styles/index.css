@@ -1,3 +1,5 @@
+@import url('Styles/reset.css');
+
 /*banner------------------------------------------------------------*/
 body{
     overflow-x: hidden;
@@ -27,7 +29,7 @@ body{
     z-index: 1;
 }
 .descripcionBanner h1{
-    color: #FFF;
+    color: var(--light-bg-solid);
     font-family: Raleway;
     font-size: 2.7rem;
     font-style: normal;
@@ -39,7 +41,7 @@ body{
     filter: blur none;
 }
 .descripcionBanner p {
-    color: #FFF;
+    color: var(--light-bg-solid);
     font-family: Raleway;
     font-size: 1.7rem;
     font-style: normal;
@@ -47,28 +49,35 @@ body{
     line-height: normal;
     margin-top: auto;
 }
-.descripcionBanner button {
+.banner__link {
     width: 11rem;
     height: 2.5rem;
     flex-shrink: 0;
     border-radius: 3rem;
-    background: #FFF;
-    border-color: #FFF;
+    background: var(--light-bg-solid);
+    border-color: var(--light-bg-solid);
     border: none;
     margin-top: 1.5rem;
     color: #111;
     font-family: Inter;
     font-size: 1.2rem;
     font-weight: 600;
-    line-height: normal; 
+    line-height: normal;
+    transition: all .3s ease-in-out;
 }
-.descripcionBanner button a{
-    text-decoration: none;
-    color: #111;
+
+.banner__link:hover {
+    background-color: var(--primary-900);
+    color: var(--light-bg-solid);
 }
-.descripcionBanner button a:visited{
+
+.banner__link a{
     text-decoration: none;
-    color: #111;
+    color: inherit;
+}
+.banner__link a:visited{
+    text-decoration: none;
+    color: inherit;
 }
 
 /*Seccion Productos --------------------------------------*/
@@ -126,7 +135,7 @@ body{
     border-radius: 50px;
     background: #30343F;
     border: none;
-    color: #FFF;
+    color: var(--light-bg-solid);
     font-family: Inter;
     font-size: 1rem;
     font-style: normal;
@@ -136,39 +145,27 @@ body{
 }
 
 /* SECCION nuevos lanzamientos ------------------------------------ */
-.nuevosLanzamientos{    
-    margin-left: 10%;
-    margin-right: 10%;
+.nuevosLanzamientos{
+    margin-top: 5rem;
     margin-bottom: 2rem;
+    margin-right: 2rem;    
 }
-
-.nuevosLanzamientos h2{
-    color: #111;
-    font-family: Raleway;
-    font-size: 2.5rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: uppercase;
-    margin-bottom: 3rem;
-}
-
 .nuevosLanzamientosProductos{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;   
+    margin-bottom: 3rem;
 }
 #etiquetaNuevo { 
-    width: 5rem;
-    height: 2rem;
+    width: 81.184px;
+    height: 30px;
     background: #FF3333;
-    color: #FFF;
+    color: var(--light-bg-solid);
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Inter;
-    font-size: 1rem;
+    font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -186,13 +183,22 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 2rem;
+    padding: 2rem;
 }
 
-.nuevosLanzamientos h3{
+.nuevosLanzamientos h1{
+    color: #111;
+    font-family: Raleway;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+.nuevosLanzamientos h2{
     color: #111;
     font-family: Inter;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -200,7 +206,7 @@ body{
 .nuevosLanzamientos p{
     color:#333;
     font-family: Inter;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -208,10 +214,16 @@ body{
 .nuevosLanzamientos span{
     color: #1D84B5;
     font-family: Inter;
-    font-size: .9rem;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+.contenedorBotones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 

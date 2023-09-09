@@ -3,11 +3,6 @@
     display: none;
 }
 
-/* Estilo para el contenedor del carrito */
-#divContenedorDelCarrito {
-  position: relative; /* Importante para posicionar elementos absolutos relativos a este div */
-}
-
 .carritoDibujo {
     height: 2.5rem
 }
@@ -43,10 +38,6 @@ a:link {
 a:visited {
     color: #FFFFFF;
 
-}
-
-a:hover {
-    color: lightblue;
 }
 
 a:active {
@@ -108,9 +99,9 @@ footer{
     height: 12rem;        
     flex-shrink:0;
     background: #30343F;
-    margin-top: 2rem;
-   
+    margin-top: 2rem;   
 }
+
 .footerUsuario{
     width: auto;
     text-decoration: none;
@@ -146,13 +137,22 @@ footer p{
     font-weight: 500;
     line-height: normal;
     display: flex;
-    justify-content: center;
-    
+    justify-content: center;    
+}
+
+.navbar__link {
+    transition: background-color .3s ease-in-out;
+}
+
+.navbar__link:hover {
+    background-color: var(--primary-900);
+    padding: 5px;
 }
 
 .with-icon {
-  align-items: center;
-  gap: var(--spacing-8);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
 }
 
 .with-submenu:hover .submenu {
@@ -167,7 +167,8 @@ footer p{
 }
 
 .submenu__item {
-    margin-bottom: .5em;
+    display: block;
+    padding: var(--spacing-8) var(--spacing-16);
 }
 
 .submenu__link {

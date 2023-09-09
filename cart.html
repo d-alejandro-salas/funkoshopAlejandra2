@@ -19,8 +19,8 @@
 </head>
 <body>
     <main>
-        <section id="carrito">
-            <h2>CARRITO DE COMPRAS</h2>
+        <div id="carrito">
+        <h1>CARRITO DE COMPRAS</h1>
             <section class="encabezadoCarrito">
                 <label for="title">
                     <span>DETALLE DE PRODUCTO</span>
@@ -29,43 +29,64 @@
                 </label>
             </section>
             <section class="productoCarrito">
-                <label for="item">
+                <div class="productoInfo">
                     <img src="multimedia/star-wars/baby-yoda-1.webp" alt="baby yoda">
                     <div class="descripcionProductoCarrito">
                         <h3>BABY YODA BLUEBALL</h3>
                         <p>STAR WARS</p>
-                        <p>precio: $<span class="precioUnitario">1799.99</span></p>
+                        <p>Precio: $<span class="precioUnitario">1799.99</span></p>
                     </div>
+                </div>
+                <div class="productoCantidad">
                     <input type="number" placeholder="0" class="quantityInput">
+                </div>
+                <div class="productoTotal">
                     <span class="total-cell">0</span>
+                </div>
+                <div class="productoEliminar">
                     <img class="itemEliminator" src="multimedia/icons/delete-cart.svg" alt="icono borrar item">
-                </label>
+                </div>
             </section>
             <section class="productoCarrito">
-                <label for="item">
+                <div class="productoInfo">
                     <img src="multimedia/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Pidgeotto de la serie Pokémon">
                     <div class="descripcionProductoCarrito">
                         <h3>PIDGEOTTO</h3>
                         <p>POKÉMON</p>
-                        <p>Precio unitario: $<span class="precioUnitario">1799.99</span></p>
+                        <p>Precio: $<span class="precioUnitario">1799.99</span></p>
                     </div>
+                </div>
+                <div class="productoCantidad">
                     <input type="number" placeholder="0" class="quantityInput">
+                </div>
+                <div class="productoTotal">
                     <span class="total-cell">0</span>
+                </div>
+                <div class="productoEliminar">
                     <img class="itemEliminator" src="multimedia/icons/delete-cart.svg" alt="icono borrar item">
-                </label>
+                </div>
             </section>
-        </section>
-        <section id="resumen">
+        </div>
+        <div id="resumen">
           <h2>RESUMEN</h2>
-          <div class="resumenColumna">
-            <p>CANTIDAD DE ELEMENTOS: <span id="cantidadTotal">0</span></p>
-            <p>SUBTOTAL: <span id="subtotal">$0.00</span></p>
+          <div id="resumenColumna">
+            <div class="resumenElemento">
+              <p>CANTIDAD DE ELEMENTOS:</p>
+              <span id="cantidadTotal">0</span>
+            </div>
+            <div class="resumenElemento">
+              <p>SUBTOTAL:</p>
+              <span id="subtotal">$0.00</span>
+            </div>
             <p>ENVÍO: $0.00</p>
             <hr>
-            <p>TOTAL: <span id="total">$0.00</span></p>
+            <div class="resumenElemento">
+              <p>TOTAL:</p>
+              <span id="total">$0.00</span>
+            </div>
           </div>
           <button>IR A PAGAR</button>
-        </section>
+        </div>
     </main>
   <script>
     // Función para mostrar y actualizar el badge del carrito

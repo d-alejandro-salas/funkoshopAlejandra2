@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </a>
         <div class="menuHeader">
           <nav class="navHeaderUsuario">
-            <div class="menuHeader-link">
+            <div class="menuHeader-link navbar__item with-submenu">
               <a class="navbar__link with-icon" href="shop.html">SHOP<iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
               <ul class="submenu">
                 <li class="submenu__item">
@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 </li>
               </ul>
             </div>
-            <a class="menuHeader-link" href="#">CONTACTO</a>
-            <a class="menuHeader-link" href="admin/login.html">LOGIN</a>
+            <a class="menuHeader-link navbar__link" href="#">CONTACTO</a>
+            <a class="menuHeader-link navbar__link" href="admin/login.html">LOGIN</a>
             <a class="menuHeader-link carritoDibujo" href="cart.html">
               <img src="multimedia/icons/cart-icon.svg" alt="carrito">
               <p id="cartBadge" class="noDisplay">0</p>

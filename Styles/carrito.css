@@ -1,0 +1,98 @@
+/* CSS en el archivo styles.css */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section, #resumenColumna {
+    background: #FAFAFF;
+    border: 1px solid #ccc;
+    border-radius: 0.625rem;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.encabezadoCarrito {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.productoCarrito {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.productoInfo {
+    display: flex;
+    align-items: center;
+}
+
+.productoInfo img {
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+.descripcionProductoCarrito {
+    font-size: 1.2rem;
+}
+
+.productoCantidad input {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.productoTotal {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.productoEliminar img {
+    width: 20px;
+    cursor: pointer;
+}
+
+/*RESUMEN*/
+
+#resumen {
+  padding: 1.5rem;
+  align-items: flex-end;
+  gap: 1.25rem;
+  width: 40%; /* Tamaño del 30% del ancho de la pantalla */
+  margin-left: auto; /* Alinea a la derecha de la pantalla */
+}
+
+
+#resumenColumna {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espacio entre los párrafos */
+}
+
+.resumenElemento {
+  display: flex;
+  justify-content: space-between; /* Divide el contenido en dos columnas */
+  align-items: center;
+}
+
+button {
+  background-color: red; /* Color de fondo rojo */
+  width: 100%; /* Ocupar todo el ancho disponible */
+  padding: 10px; /* Espaciado interno para el botón */
+  color: white; /* Color del texto en el botón */
+  border: none; /* Sin bordes */
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: darkred; /* Cambiar color de fondo en el hover */
+}
+
+
