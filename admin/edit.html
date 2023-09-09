@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <title>EDIT</title>
+    <script src="../Scripts/headerFooterAdmin.js"></script>
+</head>
+<body>
+    <main>
+        <h1>EDITAR ITEM</h1>
+        <label class="edit" for="text">
+            <span>Categoría:</span>
+            <select id="selectCategoria" name="Categoría">
+                <option  class="opcionSeleccionar" value="" disabled selected>Seleccionar</option>
+            </select>
+            <span>Licencia:</span>
+            <select id="selectLicencia" name="Licencia">
+                <option  class="opcionSeleccionar" value="" disabled selected>Seleccionar</option>
+            </select>
+        </label>
+        <h2>Nombre del producto:</h2>
+       
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <span>SKU:</span>
+        <span>Precio:</span>
+        <span>Stock:</span>
+        <span>Descuento:</span>
+        <span>Cuotas:</span>
+            <select id="selectCuotas" name="cuotas">
+                <option  class="opcionCuotas" value="" disabled selected>3 Cuotas sin interés</option>
+            </select>
+        </label>
+        <div class="elegirArchivos">
+            <span>Imágenes:</span>
+            <input type="file" name="Elegir Archivos">
+        </div>
+        <div class="botonesCrearItem">
+            <button class="botonesCrearItem">Modificar Producto</button>
+        </div>
+
+    </main>
+</body>
+</html>

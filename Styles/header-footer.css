@@ -1,0 +1,271 @@
+/* Estilo para el div redondo que muestra la cantidad en el carrito */
+.noDisplay {
+    display: none;
+}
+
+/* Estilo para el contenedor del carrito */
+#divContenedorDelCarrito {
+  position: relative; /* Importante para posicionar elementos absolutos relativos a este div */
+}
+
+.carritoDibujo {
+    height: 2.5rem
+}
+
+/* Estilo para el badge del carrito */
+.cartBadge {
+    position: absolute;
+    background: #FF4848;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 90rem;
+    text-align: center;
+    font-size: .9rem;
+    margin-left: 1.15rem;
+    font-family: inter;
+}
+
+#cabeceraUsuario { 
+    width: auto ;
+    height: 9rem;
+    flex-shrink:0;
+    background: #30343F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+a:link {
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+a:visited {
+    color: #FFFFFF;
+
+}
+
+a:hover {
+    color: lightblue;
+}
+
+a:active {
+    color: #FF4848;
+}
+.logoMenu{
+    width: 25rem;
+    height: auto;
+    padding: 5rem 1.5rem;
+    
+ }
+.navHeaderUsuario{
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+    
+}
+.contadorCarrito{
+    position: absolute;
+    background: #FF4848;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 90rem;
+    text-align: center;
+    font-size: .9rem;
+    margin-left: 1.6rem;
+    font-family: inter;
+}
+.menuHeader-link {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    font-family: Raleway;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-right: 2rem
+
+}
+.menuHeader-link img{
+    width: 1.7rem;
+}
+.selectShop {
+    background-color:#30343F ;
+    font-family: Raleway;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: none;
+    color: #FFFFFF;
+    text-align: end;
+    margin-right: 2rem
+}
+
+footer{
+    width: auto ;
+    height: 12rem;        
+    flex-shrink:0;
+    background: #30343F;
+    margin-top: 2rem;
+   
+}
+.footerUsuario{
+    width: auto;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+.navFooter a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: .7rem;
+    margin-bottom: 0;
+}
+.logoFooter img{
+    width: 6rem;
+    margin-top: 1.5rem;
+
+}
+footer p{
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.with-icon {
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+.with-submenu:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    width: 300px;
+    position: absolute;
+    background-color: var(--dark-bg-solid);
+}
+
+.submenu__item {
+    margin-bottom: .5em;
+}
+
+.submenu__link {
+    display: inline;
+    padding: var(--spacing-8) var(--spacing-16);
+    font-size: var(--font-medium);
+    transition: background .3s ease-in-out;
+}
+
+.submenu__link:hover {
+    background-color: var(--primary-900);
+}
+
+@media screen and (max-width:768px){
+    
+    #cabeceraUsuario { 
+        width: auto;
+        height: 12rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;    
+    }
+    .logoMenu{
+        width: 25rem;
+        height: auto;
+        padding: .6rem 1.5rem;
+
+    }
+    .menuHeader-link {
+    font-size: 1rem;
+    }
+    .selectShop{
+        font-size: 1rem;
+    }
+    footer{
+        width: auto;
+        height: 11rem;        
+        
+    }
+    .footerUsuario{
+        height: 8rem;
+    }
+    .navFooter a{
+    
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top: .5rem;
+    }
+    .logoFooter img{
+        width: 5rem;
+        margin-top: .5rem;
+
+    }
+    footer p{
+
+        font-size: .9rem;   
+    }
+}
+@media screen and (max-width:480px){
+    
+    .logoMenu{
+        width: 20rem;
+        height: auto;
+        padding: .6rem 1.5rem;
+    }
+    .selectShop{
+        font-size: .9em;
+    }
+    .menuHeader-link{
+        font-size: .9em;
+    }
+    .menuHeader-link img{
+        width: 2em;
+    }
+    footer{
+        width: auto;
+        height: 11rem;        
+        
+    }
+    .footerUsuario{
+        height: 8rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .navFooter a{
+        margin-top: .3rem;
+    }
+    .logoFooter img{
+        width: 3rem;
+        margin-top: .5rem;
+    
+    }
+    footer p{
+        font-size: .9rem;   
+    }
+    
+    }
+    

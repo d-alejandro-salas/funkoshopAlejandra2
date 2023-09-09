@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <script src="Scripts/headerFooter.js"></script>
+    <title>CARRITO</title>
+</head>
+<body>
+    <main>
+        <section id="carrito">
+            <h2>CARRITO DE COMPRAS</h2>
+            <section class="encabezadoCarrito">
+                <label for="title">
+                    <span>DETALLE DE PRODUCTO</span>
+                    <span>CANTIDAD</span>
+                    <span>TOTAL</span>
+                </label>
+            </section>
+            <section class="productoCarrito">
+                <label for="item">
+                    <img src="multimedia/star-wars/baby-yoda-1.webp" alt="baby yoda">
+                    <div class="descripcionProductoCarrito">
+                        <h3>BABY YODA BLUEBALL</h3>
+                        <p>STAR WARS</p>
+                        <p>precio: $<span class="precioUnitario">1799.99</span></p>
+                    </div>
+                    <input type="number" placeholder="0" class="quantityInput">
+                    <span class="total-cell">0</span>
+                    <img class="itemEliminator" src="multimedia/icons/delete-cart.svg" alt="icono borrar item">
+                </label>
+            </section>
+            <section class="productoCarrito">
+                <label for="item">
+                    <img src="multimedia/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Pidgeotto de la serie Pokémon">
+                    <div class="descripcionProductoCarrito">
+                        <h3>PIDGEOTTO</h3>
+                        <p>POKÉMON</p>
+                        <p>Precio unitario: $<span class="precioUnitario">1799.99</span></p>
+                    </div>
+                    <input type="number" placeholder="0" class="quantityInput">
+                    <span class="total-cell">0</span>
+                    <img class="itemEliminator" src="multimedia/icons/delete-cart.svg" alt="icono borrar item">
+                </label>
+            </section>
+        </section>
+        <section id="resumen">
+          <h2>RESUMEN</h2>
+          <div class="resumenColumna">
+            <p>CANTIDAD DE ELEMENTOS: <span id="cantidadTotal">0</span></p>
+            <p>SUBTOTAL: <span id="subtotal">$0.00</span></p>
+            <p>ENVÍO: $0.00</p>
+            <hr>
+            <p>TOTAL: <span id="total">$0.00</span></p>
+          </div>
+          <button>IR A PAGAR</button>
+        </section>
+    </main>
+  <script>
+    // Función para mostrar y actualizar el badge del carrito
+    function updateCartBadge(totalQuantity) {      
+      cartBadge.textContent = totalQuantity; // Actualizar el número en el badge
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Seleccionar todos los elementos relevantes del DOM
+      const quantityInputs = document.querySelectorAll('.quantityInput');
+      const totalCells = document.querySelectorAll('.total-cell');
+      const cantidadTotal = document.getElementById('cantidadTotal');
+      const subtotal = document.getElementById('subtotal');
+      const total = document.getElementById('total');
+      const preciosUnitarios = document.querySelectorAll('.precioUnitario');
+      const itemEliminators = document.querySelectorAll('.itemEliminator');
+
+      // Agregar eventos a los campos de cantidad y botones de eliminación
+      for (let i = 0; i < quantityInputs.length; i++) {
+        const quantityInput = quantityInputs[i];
+        const totalCell = totalCells[i];
+        const itemEliminator = itemEliminators[i]; // Seleccionar la "X" de eliminación
+
+        // Evento cuando cambia la cantidad
+        quantityInput.addEventListener('change', () => {
+          updateTotal(i);
+          updateResumen();
+        });
+
+        // Evento cuando se hace clic en la "X" de eliminación  
+        itemEliminator.addEventListener('click', () => {
+          removeItem(i); // Llamar a la función de eliminación
+          updateResumen(); // Actualizar el resumen después de eliminar
+        });
+      }
+
+      // Función para actualizar el total de un ítem
+      function updateTotal(index) {
+        const pricePerItem = parseFloat(preciosUnitarios[index].textContent);
+        const quantity = parseInt(quantityInputs[index].value);
+        const totalAmount = pricePerItem * quantity;
+        totalCells[index].textContent = `$${totalAmount.toFixed(2)}`;
+      }
+
+      // Función para actualizar el resumen
+      function updateResumen() {
+        let totalQuantity = 0;
+        let totalAmount = 0;
+
+        for (let i = 0; i < quantityInputs.length; i++) {
+          const quantityValue = parseInt(quantityInputs[i].value);
+          if (!isNaN(quantityValue) && !itemEliminators[i].classList.contains('removed')) {
+            totalQuantity += quantityValue;
+            totalAmount += parseFloat(totalCells[i].textContent.replace('$', ''));
+          }
+        }
+
+        // Actualizar los elementos de resumen
+        cantidadTotal.textContent = totalQuantity;
+        subtotal.textContent = `$${totalAmount.toFixed(2)}`;
+        total.textContent = `$${totalAmount.toFixed(2)}`;
+
+        // Mostrar y actualizar el badge del carrito
+        updateCartBadge(totalQuantity);
+      }
+      // Función para eliminar un ítem
+      function removeItem(index) {
+        const row = quantityInputs[index].closest('section');
+        row.remove(); // Eliminar la fila completa del ítem
+        itemEliminators[index].classList.add('removed'); // Marcar la "X" como eliminada
+      }
+    });
+  </script>
+</body>
+</html>
