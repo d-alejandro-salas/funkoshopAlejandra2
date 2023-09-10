@@ -39,6 +39,12 @@
   padding: 0;
 }
 
+header, footer {
+    width: auto;
+    background: #30343F;
+    color: #FFF;
+}
+
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -49,6 +55,17 @@ ul, ol {
     padding-left: 0;
 }
 
+li a {
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex; /* Establece el elemento <a> como flex */
+    align-items: center;
+}
+
 h1 {
     color: #111;
     font-family: Raleway;
@@ -57,4 +74,33 @@ h1 {
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
+}
+
+/* Eliminar estilos por defecto de los botones */
+button {
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el relleno */
+    border: none; /* Elimina el borde */
+    font: inherit; /* Hereda la fuente del elemento padre */
+    cursor: pointer; /* Cambia el cursor a un puntero para indicar que es un botón */
+    /* Otros estilos según tus necesidades */
+}
+
+.cartelitoRojo {
+    background: #FF3333;
+    color: #FAFAFF !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    position: absolute;
+}
+
+.etiquetaNuevo { 
+    width: 81.184px;
+    height: 30px;
 }

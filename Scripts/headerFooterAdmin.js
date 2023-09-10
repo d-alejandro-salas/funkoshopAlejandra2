@@ -12,15 +12,15 @@ document.addEventListener("DOMContentLoaded", function () {
   function generateHeader() {
     const header = document.createElement('header');
     header.innerHTML = `
-    <nav>
-      <div class="cabeceraAdmin">
-          <a href="index.html"><img  class="logoMenu" src="../multimedia/branding/logo_light_horizontal.svg" alt="logo"></a>
-          <ul class="menuHeaderAdmin">
-              <a href="../shop.html">VER TIENDA</a>
-              <a href="admin.html">ADMIN</a>
-              <a href="login.html">SALIR</a>
-          </ul>
-      </div>
+    <a href="../index.html">
+      <img  class="logoMenu" src="../multimedia/branding/logo_light_horizontal.svg" alt="logo">
+    </a>
+    <nav class="menuHeader">
+      <ul class="ulHeader">
+      <li><a class="menuHeader-link navbar__link" href="../shop.html">VER TIENDA</a>
+      </li><li><a class="menuHeader-link navbar__link" href="admin.html">ADMIN</a>
+      </li><li><a class="menuHeader-link navbar__link" href="login.html">SALIR</a>
+      </li></ul>
     </nav>
     `;
     document.body.prepend(header);
@@ -30,12 +30,25 @@ document.addEventListener("DOMContentLoaded", function () {
   function generateFooter() {
     const footer = document.createElement('footer');
     footer.innerHTML = `
-      <a href="../shop.html">SHOP</a>
-      <a href="#">REGISTRARSE</a>
-      <a href="#">INGRESAR</a>
-      <a href="#">CONTACTO</a>
-      <img src="../multimedia/branding/isotype.svg" alt="Logo Funkoshop">
-      <p class="copy">All rights reserved 2023 - Funkoshop</p>
+    <div class="footerUsuario">
+      <ul class="navFooter">
+        <li>
+          <a class="menuHeader-link navbar__link" href="../shop.html">SHOP</a>
+        </li>
+        <li>
+          <a class="menuHeader-link navbar__link" href="register.html">REGISTRARSE</a>
+        </li>
+        <li>
+          <a class="menuHeader-link navbar__link" href="login.html">INGRESAR</a>
+        </li>
+        <li>
+          <a class="menuHeader-link navbar__link" href="#">CONTACTO</a>
+      </ul>
+      <div class="logoFooter">
+        <img src="../multimedia/branding/isotype.svg" alt="Logo Funkoshop">
+      </div>
+    </div>
+    <p class="copy">All rights reserved 2023 - Funkoshop</p>
     `;
     document.body.appendChild(footer); // Cambia 'prepend' a 'appendChild' para ubicarlo al final del body
   }

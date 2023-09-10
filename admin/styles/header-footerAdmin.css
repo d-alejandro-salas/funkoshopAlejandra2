@@ -1,0 +1,14 @@
+a:link {
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+a:visited {
+    color: #FFFFFF;
+}
+
+a:active {
+    color: #FF4848;
+}
+
+a {text-decoration: none;}

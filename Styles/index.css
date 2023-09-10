@@ -56,7 +56,6 @@ body{
     border-radius: 3rem;
     background: var(--light-bg-solid);
     border-color: var(--light-bg-solid);
-    border: none;
     margin-top: 1.5rem;
     color: #111;
     font-family: Inter;
@@ -134,7 +133,6 @@ body{
     flex-shrink: 0;
     border-radius: 50px;
     background: #30343F;
-    border: none;
     color: var(--light-bg-solid);
     font-family: Inter;
     font-size: 1rem;
@@ -156,21 +154,12 @@ body{
     flex-wrap: wrap;   
     margin-bottom: 3rem;
 }
-#etiquetaNuevo { 
+
+/*.etiquetaNuevo { 
     width: 81.184px;
     height: 30px;
-    background: #FF3333;
-    color: var(--light-bg-solid);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Inter;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    position: absolute;
-}
+} ESTE ESTILO NO ES NECESARIO PORQUE YA ESTÁ EN EL RESET*/
+
 .lanzamientosImg{
     display: flex;
     justify-content: flex-end;

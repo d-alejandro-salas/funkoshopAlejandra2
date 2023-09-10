@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <title>LOGIN | Funkoshop</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/reset.css">
-    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
     <script src="../Scripts/headerFooterAdmin.js"></script>
+    <link rel="stylesheet" href="../Styles/reset.css">
+    <link rel="stylesheet" href="Styles/login.css">
 </head>
 <body>
     <main>
-        <h1>INGRESAR A MI CUENTA</h1>
-        <div class="login">
-            <span>Email: <input type="email" placeholder="johndoe@correo.com"></span>
-            <span>Contraseña: <input type="password" placeholder="*********"></span>
-        </div>
-       
-        <div>
-            <button id="buttonRegistro" >Ingresar</button> <input type="checkbox">Recordarme
-            <p>Olvidé mi contraseña</p>
-        </div>
-       
-    </main>  
+        <h2>INGRESAR A MI CUENTA</h2>
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" class="form__input" id="email" placeholder="mail@empresa.com" required><br><br>          
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required><br><br>        
+            <button class="etiquetaNuevo cartelitoRojo" type="submit">Ingresar</button>
+            <label for="remember">
+                <input type="checkbox" id="remember" name="remember"> Recordarme
+            </label>
+        </form>
+        <p><a href="#">Olvidé mi contraseña</a></p>
+    </main>
 </body>
 </html>

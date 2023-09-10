@@ -1,3 +1,38 @@
+header {
+    height: 9rem;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a:link {
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+a:visited {
+    color: #FFFFFF;
+
+}
+
+a:active {
+    color: #FF4848;
+}
+
+a {text-decoration: none;}
+
+.logoMenu{
+    width: 25rem;
+    height: auto;
+    padding: 5rem 1.5rem;    
+ }
+
+.ulHeader{
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;    
+}
+
 /* Estilo para el div redondo que muestra la cantidad en el carrito */
 .noDisplay {
     display: none;
@@ -20,41 +55,6 @@
     font-family: inter;
 }
 
-#cabeceraUsuario { 
-    width: auto ;
-    height: 9rem;
-    flex-shrink:0;
-    background: #30343F;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-a:link {
-    color: #FFFFFF;
-    font-weight: 500;
-}
-
-a:visited {
-    color: #FFFFFF;
-
-}
-
-a:active {
-    color: #FF4848;
-}
-.logoMenu{
-    width: 25rem;
-    height: auto;
-    padding: 5rem 1.5rem;
-    
- }
-.navHeaderUsuario{
-    display: flex;
-    align-items: center;
-    margin-right: 3rem;
-    
-}
 .contadorCarrito{
     position: absolute;
     background: #FF4848;
@@ -76,13 +76,14 @@ a:active {
     font-weight: 500;
     line-height: normal;
     margin-right: 2rem
-
 }
+
 .menuHeader-link img{
     width: 1.7rem;
 }
+
 .selectShop {
-    background-color:#30343F ;
+    background-color:#30343F;
     font-family: Raleway;
     font-size: 1.3rem;
     font-style: normal;
@@ -94,14 +95,6 @@ a:active {
     margin-right: 2rem
 }
 
-footer{
-    width: auto ;
-    height: 12rem;        
-    flex-shrink:0;
-    background: #30343F;
-    margin-top: 2rem;   
-}
-
 .footerUsuario{
     width: auto;
     text-decoration: none;
@@ -111,11 +104,10 @@ footer{
     margin-left: 4rem;
     margin-right: 4rem;
 }
-.navFooter a{
-    text-decoration: none;
+
+.navFooter a {
     display: flex;
     flex-direction: column;
-    color: #FFF;
     font-family: Raleway;
     font-size: 1.3rem;
     font-style: normal;
@@ -124,13 +116,19 @@ footer{
     margin-top: .7rem;
     margin-bottom: 0;
 }
+
 .logoFooter img{
     width: 6rem;
     margin-top: 1.5rem;
-
 }
-footer p{
-    color: #FFF;
+
+footer {
+    height: 12rem;        
+    flex-shrink:0;
+    margin-top: 2rem;   
+}
+
+footer p {
     font-family: Raleway;
     font-size: 1rem;
     font-style: normal;
@@ -144,9 +142,13 @@ footer p{
     transition: background-color .3s ease-in-out;
 }
 
-.navbar__link:hover {
+li {
+    display: flex; /* Establece el elemento <li> como flex */
+    align-items: center; /* Alinea verticalmente los elementos dentro de <li> al centro */
+}
+
+li:hover {
     background-color: var(--primary-900);
-    padding: 5px;
 }
 
 .with-icon {
@@ -184,7 +186,7 @@ footer p{
 
 @media screen and (max-width:768px){
     
-    #cabeceraUsuario { 
+    header { 
         width: auto;
         height: 12rem;
         display: flex;
@@ -192,81 +194,90 @@ footer p{
         align-items: center;
         flex-direction: column;    
     }
+
     .logoMenu{
         width: 25rem;
         height: auto;
         padding: .6rem 1.5rem;
-
     }
+
     .menuHeader-link {
     font-size: 1rem;
     }
+
     .selectShop{
         font-size: 1rem;
     }
+
     footer{
         width: auto;
-        height: 11rem;        
-        
+        height: 11rem;  
     }
+
     .footerUsuario{
         height: 8rem;
     }
-    .navFooter a{
-    
+
+    .navFooter a {    
         font-size: 1rem;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
         margin-top: .5rem;
     }
+
     .logoFooter img{
         width: 5rem;
         margin-top: .5rem;
-
     }
-    footer p{
 
+    footer p {
         font-size: .9rem;   
     }
 }
-@media screen and (max-width:480px){
+
+@media screen and (max-width:480px) {
     
     .logoMenu{
         width: 20rem;
         height: auto;
         padding: .6rem 1.5rem;
     }
+
     .selectShop{
         font-size: .9em;
     }
+
     .menuHeader-link{
         font-size: .9em;
     }
+
     .menuHeader-link img{
         width: 2em;
     }
-    footer{
+
+    footer {
         width: auto;
         height: 11rem;        
-        
     }
+
     .footerUsuario{
         height: 8rem;
         margin-left: 2rem;
         margin-right: 2rem;
     }
+
     .navFooter a{
         margin-top: .3rem;
     }
+
     .logoFooter img{
         width: 3rem;
         margin-top: .5rem;
-    
     }
-    footer p{
+
+    footer p {
         font-size: .9rem;   
     }
-    
-    }
+}
     

@@ -11,35 +11,38 @@ document.addEventListener("DOMContentLoaded", function () {
   // Generar el header
   function generateHeader() {
     const header = document.createElement('header');
-    header.id = "cabeceraUsuario";
     header.innerHTML = `
         <a href="index.html">
           <img class="logoMenu" src="multimedia/branding/logo_light_horizontal.svg" alt="logo">
         </a>
-        <div class="menuHeader">
-          <nav class="navHeaderUsuario">
-            <div class="menuHeader-link navbar__item with-submenu">
+        <nav class="menuHeader">
+          <ul class="ulHeader">
+            <li class="menuHeader-link navbar__item with-submenu">
               <a class="navbar__link with-icon" href="shop.html">SHOP<iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
               <ul class="submenu">
                 <li class="submenu__item">
-                  <a class="submenu__link" href="#">Funkos</a>
+                  <a href="#">Funkos</a>
                 </li>
                 <li class="submenu__item">
-                  <a class="submenu__link" href="#">Remeras</a>
+                  <a href="#">Remeras</a>
                 </li>
                 <li class="submenu__item">
-                  <a class="submenu__link" href="#">Llaveros</a>
+                  <a href="#">Llaveros</a>
                 </li>
               </ul>
-            </div>
-            <a class="menuHeader-link navbar__link" href="#">CONTACTO</a>
-            <a class="menuHeader-link navbar__link" href="admin/login.html">LOGIN</a>
-            <a class="menuHeader-link carritoDibujo" href="cart.html">
-              <img src="multimedia/icons/cart-icon.svg" alt="carrito">
+            </li>
+            <li><a class="menuHeader-link navbar__link" href="#">CONTACTO</a>
+            </li>
+            <li><a class="menuHeader-link navbar__link" href="admin/login.html">LOGIN</a>
+            </li>
+            <li>
+              <a class="menuHeader-link carritoDibujo" href="cart.html">
+                <img src="multimedia/icons/cart-icon.svg" alt="carrito">
+              </a>
               <p id="cartBadge" class="noDisplay">0</p>
-            </a>
-          </nav>
-        </div> 
+            </li>
+          </ul>
+        </nav>
     `;
     document.body.prepend(header);
   }
@@ -49,11 +52,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const footer = document.createElement('footer');
     footer.innerHTML = `
     <div class="footerUsuario">
-      <div class="navFooter">
-        <a href="shop.html">SHOP</a>
-        <a href="admin/login.html">INGRESAR</a>
-        <a href="#">CONTACTO</a>
-      </div>
+      <ul class="navFooter">
+        <li><a href="shop.html">SHOP</a>
+       </li><li><a href="admin/login.html">INGRESAR</a>
+       </li><li><a href="#">CONTACTO</a>
+      </li></ul>
       <div class="logoFooter">
         <img src="multimedia/branding/isotype.svg" alt="Logo Funkoshop">
       </div>

@@ -75,21 +75,12 @@ main{
     flex-wrap: wrap;   
     margin-bottom: 3rem;
 }
-#etiquetaNuevo { 
+
+/*.etiquetaNuevo { 
     width: 81.184px;
     height: 30px;
-    background: #FF3333;
-    color: #FFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Inter;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    position: absolute;
-}
+} ESTE ESTILO NO ES NECESARIO PORQUE YA ESTÁ EN EL RESET*/
+
 .lanzamientosImg{
     display: flex;
     justify-content: flex-end;
