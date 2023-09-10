@@ -6,25 +6,78 @@ main {
     padding: 20px;
 }
 
-section, #resumenColumna {
+section, #resumenColumna, .encabezadoCarrito {
     background: #FAFAFF;
     border: 1px solid #ccc;
     border-radius: 0.625rem;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 1rem;
 }
 
+#resumenColumna {
+    padding: 1.5rem;
+    gap: 1.25rem;
+}
+
+#carrito {
+    width: 100%;
+}
+
+/* Estilos generales para el contenedor del carrito */
 .encabezadoCarrito {
-    text-align: center;
-    font-weight: bold;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    width: 76.25rem;
+    height: 3.1875rem;
+    flex-shrink: 0;
+    gap: 10px;
     margin-bottom: 20px;
+    padding: 10px;
+    font-weight: bold;
 }
 
+/* Estilos generales para los productos en el carrito */
 .productoCarrito {
     display: flex;
-    align-items: center;
+    width: 76.25rem;
+    height: 12.0625rem;
+    padding: 1rem;
     justify-content: space-between;
-    margin-bottom: 20px;
+    align-items: center;
+    flex-shrink: 0;
 }
+
+/* Estilos para la imagen del producto */
+.productoCarrito .columna1 img {
+  max-width: 100px;
+  max-height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Estilos para la descripción del producto */
+.descripcionProductoCarrito {
+  text-align: center;
+}
+
+/* Estilos para el input de cantidad */
+.productoCantidad .quantityInput {
+  width: 50px;
+  text-align: center;
+}
+
+/* Estilos para el total del producto */
+.productoTotal .total-cell {
+  font-weight: bold;
+}
+
+/* Estilos para el icono de eliminar producto */
+.productoEliminar .itemEliminator {
+  max-width: 20px;
+  max-height: 20px;
+  cursor: pointer;
+}
+
 
 .productoInfo {
     display: flex;
@@ -34,10 +87,6 @@ section, #resumenColumna {
 .productoInfo img {
     max-width: 100px;
     margin-right: 20px;
-}
-
-.descripcionProductoCarrito {
-    font-size: 1.2rem;
 }
 
 .productoCantidad input {
@@ -58,6 +107,14 @@ section, #resumenColumna {
 
 /*RESUMEN*/
 
+#resumenH2 {
+    display: inline-flex;
+    padding-bottom: 0px;
+    align-items: center;
+    gap: 0.625rem; border-bottom: 5px solid #F33;
+    margin-bottom: 10px;
+}
+
 #resumen {
   padding: 1.5rem;
   align-items: flex-end;
@@ -65,7 +122,6 @@ section, #resumenColumna {
   width: 40%; /* Tamaño del 30% del ancho de la pantalla */
   margin-left: auto; /* Alinea a la derecha de la pantalla */
 }
-
 
 #resumenColumna {
   display: flex;

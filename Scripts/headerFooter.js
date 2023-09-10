@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     header.id = "cabeceraUsuario";
     header.innerHTML = `
         <a href="index.html">
-          <img  class="logoMenu" src="multimedia/branding/logo_light_horizontal.svg" alt="logo">
+          <img class="logoMenu" src="multimedia/branding/logo_light_horizontal.svg" alt="logo">
         </a>
         <div class="menuHeader">
           <nav class="navHeaderUsuario">

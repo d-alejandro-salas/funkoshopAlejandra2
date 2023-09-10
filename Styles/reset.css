@@ -39,8 +39,8 @@
   padding: 0;
 }
 
-.container {
-    max-width: 120px;
+main {
+    max-width: 1200px;
     margin: 0 auto;
 }
 

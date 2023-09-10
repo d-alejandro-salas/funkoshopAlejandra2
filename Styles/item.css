@@ -1,0 +1,81 @@
+/* SECCION nuevos lanzamientos ------------------------------------ */
+.nuevosLanzamientos{
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;    
+}
+.nuevosLanzamientosProductos{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;   
+    margin-bottom: 3rem;
+}
+#etiquetaNuevo { 
+    width: 81.184px;
+    height: 30px;
+    background: #FF3333;
+    color: var(--light-bg-solid);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    position: absolute;
+}
+.lanzamientosImg{
+    display: flex;
+    justify-content: flex-end;
+}
+.lanzamientosImg img{
+    width: 20rem;
+
+}
+.lanzamientosProductosN{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.nuevosLanzamientos h1{
+    color: #111;
+    font-family: Raleway;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+.nuevosLanzamientos h2{
+    color: #111;
+    font-family: Inter;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.nuevosLanzamientos p{
+    color:#333;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.nuevosLanzamientos span{
+    color: #1D84B5;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.contenedorBotones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
