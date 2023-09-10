@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
           <img class="logoMenu" src="multimedia/branding/logo_light_horizontal.svg" alt="logo">
         </a>
         <nav class="menuHeader">
-          <ul class="ulHeader">
-            <li class="menuHeader-link navbar__item with-submenu">
+          <ul class="navbar__menu">
+            <li class="navbar__item with-submenu">
               <a class="navbar__link with-icon" href="shop.html">SHOP<iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
               <ul class="submenu">
                 <li class="submenu__item">
@@ -31,9 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 </li>
               </ul>
             </li>
-            <li><a class="menuHeader-link navbar__link" href="#">CONTACTO</a>
+            <li><a class="navbar__link" href="#">CONTACTO</a>
             </li>
-            <li><a class="menuHeader-link navbar__link" href="admin/login.html">LOGIN</a>
+            <li><a class="navbar__link" href="admin/login.html">LOGIN</a>
             </li>
             <li>
               <a class="menuHeader-link carritoDibujo" href="cart.html">
@@ -66,16 +66,8 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(footer); // Cambia 'prepend' a 'appendChild' para ubicarlo al final del body
   }
 
-  // Generar el script final
-  function generateScript() {
-    const script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js';
-    document.body.appendChild(script); // Agregar el script al final del body
-  }
-
   generateHeader();
   generateFooter();
-  generateScript();
 
   if (window.location.href.includes("cart.html")) {
     const cartBadge = document.getElementById('cartBadge');

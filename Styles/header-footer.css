@@ -27,10 +27,99 @@ a {text-decoration: none;}
     padding: 5rem 1.5rem;    
  }
 
-.ulHeader{
+li {
+    display: flex; /* Establece el elemento <li> como flex */
+    align-items: center; /* Alinea verticalmente los elementos dentro de <li> al centro */
+}
+
+ul li:hover {
+    background-color: var(--primary-900);
+}
+
+.navbar__item {
+    font-family: var(--alternative-font);
+    color: var(--ligth-font-solid);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar__menu{
+    margin: 0;
+    padding: 0;
     display: flex;
     align-items: center;
-    margin-right: 3rem;    
+    gap: var(--spacing-20);   
+}
+
+.navbar__link {
+    margin: 0;
+    text-decoration: none;
+    font-family: Raleway !important;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-right: 2rem;
+    color: inherit;
+    font-size: var(--font-medium);
+    padding: var(--spacing-8) var(--spacing-16);
+    display: inline-block;
+    position: relative;
+    transition: background-color .3s ease-in-out;
+}
+
+.with-icon {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+}
+
+.with-submenu:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    background-color: var(--dark-bg-solid);
+    width: 300px;
+    z-index: 3;
+}
+
+.submenu__item {
+    display: block;
+    padding: var(--spacing-8) var(--spacing-16);
+}
+
+.submenu__link {
+    display: inline;
+    padding: var(--spacing-8) var(--spacing-16);
+    font-size: var(--font-medium);
+    transition: background .3s ease-in-out;
+}
+
+.submenu__link:hover {
+    background-color: var(--primary-900);
+}
+
+.menuHeader-link {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    font-family: Raleway;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-right: 2rem
+}
+
+.menuHeader-link img{
+    width: 1.7rem;
 }
 
 /* Estilo para el div redondo que muestra la cantidad en el carrito */
@@ -66,34 +155,8 @@ a {text-decoration: none;}
     margin-left: 1.6rem;
     font-family: inter;
 }
-.menuHeader-link {
-    text-decoration: none;
-    display: flex;
-    justify-content: space-between;
-    font-family: Raleway;
-    font-size: 1.3rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    margin-right: 2rem
-}
 
-.menuHeader-link img{
-    width: 1.7rem;
-}
-
-.selectShop {
-    background-color:#30343F;
-    font-family: Raleway;
-    font-size: 1.3rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    border: none;
-    color: #FFFFFF;
-    text-align: end;
-    margin-right: 2rem
-}
+/*FOOTER*/
 
 .footerUsuario{
     width: auto;
@@ -136,52 +199,6 @@ footer p {
     line-height: normal;
     display: flex;
     justify-content: center;    
-}
-
-.navbar__link {
-    transition: background-color .3s ease-in-out;
-}
-
-li {
-    display: flex; /* Establece el elemento <li> como flex */
-    align-items: center; /* Alinea verticalmente los elementos dentro de <li> al centro */
-}
-
-li:hover {
-    background-color: var(--primary-900);
-}
-
-.with-icon {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-8);
-}
-
-.with-submenu:hover .submenu {
-    display: block;
-}
-
-.submenu {
-    display: none;
-    width: 300px;
-    position: absolute;
-    background-color: var(--dark-bg-solid);
-}
-
-.submenu__item {
-    display: block;
-    padding: var(--spacing-8) var(--spacing-16);
-}
-
-.submenu__link {
-    display: inline;
-    padding: var(--spacing-8) var(--spacing-16);
-    font-size: var(--font-medium);
-    transition: background .3s ease-in-out;
-}
-
-.submenu__link:hover {
-    background-color: var(--primary-900);
 }
 
 @media screen and (max-width:768px){

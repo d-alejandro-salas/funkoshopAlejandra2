@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const header = document.createElement('header');
     header.innerHTML = `
     <a href="../index.html">
-      <img  class="logoMenu" src="../multimedia/branding/logo_light_horizontal.svg" alt="logo">
+      <img class="logoMenu" src="../multimedia/branding/logo_light_horizontal.svg" alt="logo">
     </a>
     <nav class="menuHeader">
-      <ul class="ulHeader">
+      <ul class="navbar__menu">
       <li><a class="menuHeader-link navbar__link" href="../shop.html">VER TIENDA</a>
       </li><li><a class="menuHeader-link navbar__link" href="admin.html">ADMIN</a>
       </li><li><a class="menuHeader-link navbar__link" href="login.html">SALIR</a>
