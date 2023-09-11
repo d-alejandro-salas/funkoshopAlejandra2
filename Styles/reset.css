@@ -39,13 +39,12 @@
   padding: 0;
 }
 
-header, footer {
-    width: auto;
-    background: #30343F;
-    color: #FFF;
+main {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-main {
+.maxWidth {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -86,10 +85,18 @@ button {
     /* Otros estilos según tus necesidades */
 }
 
+.textoCeleste {
+    color: #1D84B5;
+    font-family: Inter;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 .cartelitoRojo {
     background: #FF3333;
     color: #FAFAFF !important;
-    display: flex;
     justify-content: center;
     align-items: center;
     font-family: Inter;
@@ -97,7 +104,7 @@ button {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    position: absolute;
+    display: flex;
 }
 
 .etiquetaNuevo { 

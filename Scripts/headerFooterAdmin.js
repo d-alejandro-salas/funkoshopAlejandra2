@@ -17,9 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
     </a>
     <nav class="menuHeader">
       <ul class="navbar__menu">
-      <li><a class="menuHeader-link navbar__link" href="../shop.html">VER TIENDA</a>
-      </li><li><a class="menuHeader-link navbar__link" href="admin.html">ADMIN</a>
-      </li><li><a class="menuHeader-link navbar__link" href="login.html">SALIR</a>
+      <li><a class="navbar__link" href="../shop.html">VER TIENDA</a>
+      </li><li><a class="navbar__link" href="admin.html">ADMIN</a>
+      </li><li><a class="navbar__link" href="login.html">SALIR</a>
       </li></ul>
     </nav>
     `;
@@ -33,16 +33,16 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="footerUsuario">
       <ul class="navFooter">
         <li>
-          <a class="menuHeader-link navbar__link" href="../shop.html">SHOP</a>
+          <a class="navbar__link" href="../shop.html">SHOP</a>
         </li>
         <li>
-          <a class="menuHeader-link navbar__link" href="register.html">REGISTRARSE</a>
+          <a class="navbar__link" href="register.html">REGISTRARSE</a>
         </li>
         <li>
-          <a class="menuHeader-link navbar__link" href="login.html">INGRESAR</a>
+          <a class="navbar__link" href="login.html">INGRESAR</a>
         </li>
         <li>
-          <a class="menuHeader-link navbar__link" href="#">CONTACTO</a>
+          <a class="navbar__link" href="#">CONTACTO</a>
       </ul>
       <div class="logoFooter">
         <img src="../multimedia/branding/isotype.svg" alt="Logo Funkoshop">

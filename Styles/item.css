@@ -56,14 +56,12 @@
     font-weight: 500;
     line-height: normal;
 }
-.nuevosLanzamientos span{
-    color: #1D84B5;
-    font-family: Inter;
+
+.nuevosLanzamientos span {
     font-size: 1rem;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
 }
+
 .contenedorBotones{
     display: flex;
     flex-direction: column;
