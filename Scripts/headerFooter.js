@@ -12,37 +12,39 @@ document.addEventListener("DOMContentLoaded", function () {
   function generateHeader() {
     const header = document.createElement('header');
     header.innerHTML = `
-        <a href="index.html">
-          <img class="logoMenu" src="multimedia/branding/logo_light_horizontal.svg" alt="logo">
-        </a>
-        <nav class="menuHeader">
-          <ul class="navbar__menu">
-            <li class="navbar__item with-submenu">
-              <a class="navbar__link with-icon" href="shop.html">SHOP<iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
-              <ul class="submenu">
-                <li class="submenu__item">
-                  <a href="#">Funkos</a>
-                </li>
-                <li class="submenu__item">
-                  <a href="#">Remeras</a>
-                </li>
-                <li class="submenu__item">
-                  <a href="#">Llaveros</a>
-                </li>
-              </ul>
-            </li>
-            <li><a class="navbar__link" href="#">CONTACTO</a>
-            </li>
-            <li><a class="navbar__link" href="admin/login.html">LOGIN</a>
-            </li>
-            <li>
-              <a class="menuHeader-link carritoDibujo" href="cart.html">
-                <img src="multimedia/icons/cart-icon.svg" alt="carrito">
-              </a>
-              <p id="cartBadge" class="noDisplay">0</p>
-            </li>
-          </ul>
-        </nav>
+      <nav class="navbar container">
+        <picture>
+          <a href="index.html">
+            <img class="logoMenu" src="multimedia/branding/logo_light_horizontal.svg" alt="logo">
+          </a>
+        </picture>
+        <ul class="navbar__menu">
+          <li class="navbar__item with-submenu">
+            <a class="navbar__link with-icon" href="shop.html">SHOP<iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
+            <ul class="submenu">
+              <li class="submenu__item">
+                <a href="#">Funkos</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Remeras</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Llaveros</a>
+              </li>
+            </ul>
+          </li>
+          <li><a class="navbar__link" href="#">CONTACTO</a>
+          </li>
+          <li><a class="navbar__link" href="admin/login.html">LOGIN</a>
+          </li>
+          <li class="carritoDibujo">
+            <a class="menuHeader-link" href="cart.html">
+              <img src="multimedia/icons/cart-icon.svg" alt="carrito">
+            </a>
+            <p id="cartBadge" class="noDisplay">0</p>
+          </li>
+        </ul>
+      </nav>
     `;
     document.body.prepend(header);
   }
@@ -51,17 +53,17 @@ document.addEventListener("DOMContentLoaded", function () {
   function generateFooter() {
     const footer = document.createElement('footer');
     footer.innerHTML = `
-    <div class="footerUsuario">
-      <ul class="navFooter">
-        <li><a href="shop.html">SHOP</a>
-       </li><li><a href="admin/login.html">INGRESAR</a>
-       </li><li><a href="#">CONTACTO</a>
-      </li></ul>
-      <div class="logoFooter">
+    <nav class="navbar container">
+      <ul class="navbar__item"> 
+        <li class="navbar__item"><a class="navbar__link" href="shop.html">SHOP</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="admin/login.html">INGRESAR</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="#">CONTACTO</a></li>
+      </ul>
+      <picture>
         <img src="multimedia/branding/isotype.svg" alt="Logo Funkoshop">
-      </div>
-    </div>
-    <p class="copy">All rights reserved 2023 - Funkoshop</p>
+      </picture>
+    </nav>
+    <p class="footerCopy">All rights reserved 2023 - Funkoshop</p>
     `;
     document.body.appendChild(footer); // Cambia 'prepend' a 'appendChild' para ubicarlo al final del body
   }

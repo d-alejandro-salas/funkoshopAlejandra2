@@ -12,10 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
   function generateHeader() {
     const header = document.createElement('header');
     header.innerHTML = `
-    <a href="../index.html">
-      <img class="logoMenu" src="../multimedia/branding/logo_light_horizontal.svg" alt="logo">
-    </a>
-    <nav class="menuHeader">
+    <nav class="navbar container">
+      <picture>
+        <a href="../index.html">
+          <img class="logoMenu" src="../multimedia/branding/logo_light_horizontal.svg" alt="logo">
+        </a>
+      </picture>
       <ul class="navbar__menu">
       <li><a class="navbar__link" href="../shop.html">VER TIENDA</a>
       </li><li><a class="navbar__link" href="admin.html">ADMIN</a>
@@ -30,25 +32,25 @@ document.addEventListener("DOMContentLoaded", function () {
   function generateFooter() {
     const footer = document.createElement('footer');
     footer.innerHTML = `
-    <div class="footerUsuario">
-      <ul class="navFooter">
-        <li>
+    <nav class="navbar container">
+      <ul class="navbar__item"> 
+        <li class="navbar__item">
           <a class="navbar__link" href="../shop.html">SHOP</a>
         </li>
-        <li>
+        <li class="navbar__item">
           <a class="navbar__link" href="register.html">REGISTRARSE</a>
         </li>
-        <li>
+        <li class="navbar__item">
           <a class="navbar__link" href="login.html">INGRESAR</a>
         </li>
-        <li>
+        <li class="navbar__item">
           <a class="navbar__link" href="#">CONTACTO</a>
       </ul>
-      <div class="logoFooter">
+      <picture>
         <img src="../multimedia/branding/isotype.svg" alt="Logo Funkoshop">
-      </div>
-    </div>
-    <p class="copy">All rights reserved 2023 - Funkoshop</p>
+      </picture>
+    </nav>
+    <p class="footerCopy">All rights reserved 2023 - Funkoshop</p>
     `;
     document.body.appendChild(footer); // Cambia 'prepend' a 'appendChild' para ubicarlo al final del body
   }

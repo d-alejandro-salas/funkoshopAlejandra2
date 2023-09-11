@@ -7,6 +7,12 @@ main {
 
 div {display: flex;}
 
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-36);
+}
+
 .form__group {
     display: flex;
     justify-content: space-between;
@@ -15,13 +21,13 @@ div {display: flex;}
 
 label {
     color: #000;
-text-align: right;
-font-family: Inter;
-font-size: 1.5rem;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-letter-spacing: 0.06rem;
+    text-align: right;
+    font-family: Inter;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.06rem;
 }
 
 #remember {
@@ -33,11 +39,30 @@ letter-spacing: 0.06rem;
     line-height: normal !important;
 }
 
-h2 {color: #1F1F1F;
-text-align: right;
-font-family: Raleway;
-font-size: 2rem;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-letter-spacing: 0.08rem;}
+h1, h2 {text-align: center;}
+
+h2 {
+    color: #1F1F1F;
+    font-family: Raleway;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.08rem;
+}
+
+.cartelitoRojo {
+    width: 6.43719rem;
+    height: 2.44138rem;
+    flex-shrink: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    font-size: var(--font-xsmall);
+    padding: var(--spacing-8) var(--spacing-12);
+}

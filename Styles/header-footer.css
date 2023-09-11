@@ -1,75 +1,56 @@
-header, footer {
-    width: auto;
-    background-color: #30343F;
-    color: #FFF;
+a {
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+header,
+footer {
+    font-family: var(--alternative-font);
+    color: var(--ligth-font-solid);
+    background-color: var(--dark-bg-solid);
 }
 
 header {
-    height: 9rem;    
+    width: auto;
+    padding: var(--spacing-36);
+}
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-a:link {
-    color: #FFFFFF;
-    font-weight: 500;
+.navbar__logo {
+    width: 300px;
 }
 
-a:visited {
-    color: #FFFFFF;
-
-}
-
-a:active {
-    color: #FF4848;
-}
-
-a {text-decoration: none;}
-
-.logoMenu{
-    width: 25rem;
-    height: auto;
-    padding: 5rem 1.5rem;    
- }
-
-li {
-    display: flex; /* Establece el elemento <li> como flex */
-    align-items: center; /* Alinea verticalmente los elementos dentro de <li> al centro */
-}
-
-ul li:hover {
-    background-color: var(--primary-900);
-}
-
-.navbar__item {
-    font-family: var(--alternative-font);
-    color: var(--ligth-font-solid);
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.navbar__menu{
-    margin: 0;
-    padding: 0;
+.navbar__menu {
     display: flex;
     align-items: center;
-    gap: var(--spacing-20);   
+    gap: var(--spacing-20);
 }
 
 .navbar__link {
-    margin: 0;
-    text-decoration: none;
-    font-family: Raleway;
-    font-size: 1.3rem;
-    font-weight: 500;
-    line-height: normal;
-    color: inherit;
+    font-size: var(--font-medium);
     padding: var(--spacing-8) var(--spacing-16);
-    display: flex;
-    justify-content: space-between;
-    transition: background-color .3s ease-in-out;
+    display: inline-block;
+    transition: background .3s ease-in-out;
+    position: relative;
+}
+
+.navbar__link:hover {
+    background-color: var(--primary-900);
 }
 
 .with-icon {
@@ -83,9 +64,7 @@ ul li:hover {
 }
 
 .submenu {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    max-width: auto;
     display: none;
     position: absolute;
     background-color: var(--dark-bg-solid);
@@ -96,44 +75,55 @@ ul li:hover {
 .submenu__item {
     display: block;
     padding: var(--spacing-8) var(--spacing-16);
+    font-size: var(--font-medium);
+}
+
+.submenu__item:hover {
+    background-color: var(--primary-900)!important;
 }
 
 .submenu__link {
-    display: inline;
+    display: block;
     padding: var(--spacing-8) var(--spacing-16);
     font-size: var(--font-medium);
     transition: background .3s ease-in-out;
 }
 
 .submenu__link:hover {
-    background-color: var(--primary-900);
+    background-color: var(--primary-900)!important;
 }
 
-.menuHeader-link img{
-    width: 1.7rem;
+p {
+    font-size: 1.8em;
 }
 
 /* Estilo para el div redondo que muestra la cantidad en el carrito */
 .noDisplay {
-    display: none;
+    display: none !important;
 }
 
 .carritoDibujo {
-    height: 2.5rem
+    position: relative;
 }
 
 /* Estilo para el badge del carrito */
-.cartBadge {
+#cartBadge {
     position: absolute;
     background: #FF4848;
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1.9rem;
+    height: 1.9rem;
     border-radius: 90rem;
     text-align: center;
-    font-size: .9rem;
-    margin-left: 1.15rem;
+    font-size: 1.2rem;
+    margin-left: 2.5rem;
     font-family: inter;
+    margin-top: -3.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5rem; /* Ajusta este valor según sea necesario */
 }
+
 
 .contadorCarrito{
     position: absolute;
@@ -148,6 +138,10 @@ ul li:hover {
 }
 
 /*FOOTER*/
+
+footer {
+    padding: var(--spacing-68);
+}
 
 .footerUsuario{
     width: auto;
@@ -176,20 +170,10 @@ ul li:hover {
     margin-top: 1.5rem;
 }
 
-footer {
-    height: 12rem;        
-    flex-shrink:0;
-    margin-top: 2rem;   
-}
-
-.copy {
+.footerCopy {
     font-family: Raleway;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    display: flex;
-    justify-content: center;    
+    margin-top: var(--spacing-36);
+    text-align: center; 
 }
 
 @media screen and (max-width:768px){
@@ -217,7 +201,7 @@ footer {
         font-size: 1rem;
     }
 
-    footer{
+    footer {
         width: auto;
         height: 11rem;  
     }

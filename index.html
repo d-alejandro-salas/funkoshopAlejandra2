@@ -29,7 +29,7 @@
             <img src="multimedia/funkos-banner.webp" alt="banner">
         </div>       
     </section>
-    <main class="contenedor">
+    <main class="container">
         <section class="productos">
             <article class="productoEnVenta">
                 <div class="imgProducto1">
@@ -65,47 +65,59 @@
                 </div>
             </article>
         </section>
-        <section class="nuevosLanzamientos">
-            <h2>ÚLTIMOS LANZAMIENTOS</h2>
-            <div class="nuevosLanzamientosProductos">
-                <div class="lanzamientosProductoN">
-                    <div class="lanzamientosImg">
-                        <p class="etiquetaNuevo cartelitoRojo">NUEVO</p>
-                        <img src="multimedia/star-wars/trooper-1.webp" alt="star wars tropa"></img>
-                    </div>
-                    <div class="lanzamientosDescripcion" >
-                        <p>STAR WARS</p>
-                        <h2>STORMTROOPER LIGHTSABER</h2>
-                        <p>$ 1799,99</p>
-                        <span>3 CUOTAS SIN INTERÉS</span>   
-                    </div> 
-                </div>
-                <div class="lanzamientosProductoN">
-                    <div class="lanzamientosImg">
-                        <p class="etiquetaNuevo cartelitoRojo">NUEVO</p>
-                        <img src="multimedia/pokemon/pidgeotto-1.webp" alt="pidgeotto pokemon"></img>
-                    </div> 
-                    <div class="lanzamientosDescripcion">
-                        <p>POKEMON</p>
-                        <h2>PIDGEOTTO</h2>
-                        <p>$ 1799,99</p>
-                        <span>3 CUOTAS SIN INTERÉS</span>  
-                    </div>                   
-                </div>        
-                <div class="lanzamientosProductoN">
-                    <div class="lanzamientosImg">
-                        <p class="etiquetaNuevo cartelitoRojo">NUEVO</p>
-                        <img src="multimedia/harry-potter/luna-1.webp" alt="Luna Harry Potter"></img>
-                    </div>
-                    <div class="lanzamientosDescripcion">
-                        <p>HARRY POTTER</p>
-                        <h2>LUNA LOVEGOOD LION MASK</h2>               
-                        <p>$ 1799,99</p>
-                        <span>3 CUOTAS SIN INTERÉS</span>   
-                    </div>                            
-                </div>                    
-            </div>       
+        <section class="slider">
+            <h2 class="slider__title">ÚLTIMOS LANZAMIENTOS</h2>
+            <ul class="slider__items">
+                <li class="slider__item">
+                    <article class="card-item">                        
+                        <a class="card-item__link" href="shop.html">
+                        <picture class="card-item__cover"><span class="cartelitoRojo etiquetaNuevo">NUEVO</span>
+                            <img class="card-item__img--front" src="multimedia/star-wars/trooper-1.webp" alt="Figura coleccionable Funko de un StromTrooper">
+                            <img class="card-item__img--back" src="multimedia/star-wars/trooper-box.webp" alt="Figura coleccionable Funko de un StromTrooper en caja">
+                        </picture>
+                        <div>
+                            <p class="card-item__licence">STAR WARS</p>
+                            <h4 class="card-item__name">STORMTROOPER LIGHTSABER</h4>
+                            <p class="card-item__price">$ 1.799,99</p>
+                            <p class="card-item__promo textoCeleste">3 CUOTAS SIN INTERÉS</p>
+                        </div>
+                        </a>
+                    </article>
+                </li>
+                <li class="slider__item">
+                    <article class="card-item">                        
+                        <a class="card-item__link" href="shop.html">
+                        <picture class="card-item__cover"><span class="cartelitoRojo etiquetaNuevo">NUEVO</span>
+                            <img class="card-item__img--front" src="multimedia/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Funko de Pidgeotto">
+                            <img class="card-item__img--back" src="multimedia/pokemon/pidgeotto-box.webp" alt="Figura coleccionable Funko de Pidgeotto en Caja">
+                        </picture>
+                        <div>
+                            <p class="card-item__licence" >POKÉMON</p>
+                            <h4 class="card-item__name">PIDGEOTTO</h4>
+                            <p class="card-item__price">$ 1.799,99</p>
+                            <p class="card-item__promo textoCeleste">3 CUOTAS SIN INTERÉS</p>
+                        </div>
+                        </a>
+                    </article>
+                </li>
+                <li class="slider__item">
+                    <article class="card-item">                        
+                        <a class="card-item__link" href="shop.html">
+                            <picture class="card-item__cover"><span class="cartelitoRojo etiquetaNuevo">NUEVO</span>
+                                <img class="card-item__img--front" src="multimedia/harry-potter/luna-1.webp" alt="Figura coleccionable Funko Luna Lovegood">
+                                <img class="card-item__img--back" src="multimedia/harry-potter/luna-box.webp" alt="Figura coleccionable Funko Luna Lovegood en caja">
+                            </picture>
+                            <div>
+                                <p class="card-item__licence" >HARRY POTTER</p>
+                                <h4 class="card-item__name">LUNA LOVEGOOD LION MASK</h4>
+                                <p class="card-item__price">$ 1.799,99</p>
+                                <p class="card-item__promo textoCeleste">3 CUOTAS SIN INTERÉS</p>
+                            </div>
+                        </a>
+                    </article>
+                </li>
+            </ul>
         </section>
-    </main>
+    </main> 
 </body>
-</html>
+</html> 

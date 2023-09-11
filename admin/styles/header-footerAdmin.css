@@ -1,10 +1,10 @@
 a:link {
-    color: #FFFFFF;
+    color: var(--ligth-font-solid);
     font-weight: 500;
 }
 
 a:visited {
-    color: #FFFFFF;
+    color: var(--ligth-font-solid);
 }
 
 a:active {
