@@ -14,6 +14,10 @@ section, #resumenColumna, .encabezadoCarrito {
     margin-bottom: 1rem;
 }
 
+.columna {
+    width: 200px !important;
+}
+
 #resumenColumna {
     padding: 1.5rem;
     gap: 1.25rem;
@@ -23,15 +27,10 @@ section, #resumenColumna, .encabezadoCarrito {
     width: 100%;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-}
-
 /* Estilos generales para el contenedor del carrito */
 .encabezadoCarrito {
-
-    width: 76.25rem;
+    display: flex;
+    width: 1000px;
     height: 3.1875rem;
     flex-shrink: 0;
     gap: 10px;
@@ -43,7 +42,7 @@ section, #resumenColumna, .encabezadoCarrito {
 /* Estilos generales para los productos en el carrito */
 .productoCarrito {
     display: flex;
-    width: 76.25rem;
+    width: 1000px;
     height: 12.0625rem;
     padding: 1rem;
     justify-content: space-between;
