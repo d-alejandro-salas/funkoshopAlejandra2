@@ -23,10 +23,14 @@ section, #resumenColumna, .encabezadoCarrito {
     width: 100%;
 }
 
-/* Estilos generales para el contenedor del carrito */
-.encabezadoCarrito {
+.grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+}
+
+/* Estilos generales para el contenedor del carrito */
+.encabezadoCarrito {
+
     width: 76.25rem;
     height: 3.1875rem;
     flex-shrink: 0;

@@ -4,6 +4,7 @@
 body{
     overflow-x: hidden;
 }
+
 #banner{
     display: flex;
     flex-direction: column;
@@ -79,282 +80,50 @@ body{
     color: inherit;
 }
 
-/*Seccion Productos --------------------------------------*/
+/* Seccion Productos --------------------------------------*/
 
-.productos{
-    margin-left: 15%;
-    margin-right: 15%;  
-}
-.productoEnVenta {
-    display: flex;
-    flex-direction: row;
+.collection {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
-    justify-content: center;
 }
 
-.productoEnVenta img {
-    position: relative;
-    width: 30em;
+.collection:nth-child(2) .collection__cover {
+    order: -1;
 }
 
-.descripcionProducto {
-    position: relative;
-    width: 45%;
+.collection__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-24);
+    align-items: start;
 }
 
-.descripcionProducto h2 {
-    color: #111;
-    font-family: Raleway;
-    font-size: 2.3em;
-    font-style: normal;
+.collection__title {
+    font-family: var(--alternative-font);
+    font-size: var(--font-display);
     font-weight: 500;
-    line-height: normal;
-    text-transform: uppercase;
-    margin-bottom: 0;
 }
 
-.descripcionProducto p {
-    color: #4F4F4F;
-    font-family: Raleway;
-    font-size: 1.4em;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-top: 0;
+.collection__text {
+    font-family: var(--alternative-font);
+    font-size: var(--font-large);
+    font-weight: 300;
+    border-bottom: 2px solid var(--primary-solid);
+    padding-bottom: var(--spacing-20);
 }
 
-.descripcionProducto img {
-    width: 40em;
-}
-
-.descripcionProducto button {
-    width: 12rem;
-    height: 3rem;
-    flex-shrink: 0;
+.collection__link {
+    display: inline-block;
+    font-size: var(--font-medium);
+    background-color: var(--dark-bg-solid);
+    color: white;
+    padding: var(--spacing-16) var(--spacing-36);
     border-radius: 50px;
-    background: #30343F;
-    color: var(--light-bg-solid);
-    font-family: Inter;
-    font-size: 1rem;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
-    margin-top: 1.2em;
+    transition: background .3s ease-in-out;
 }
 
-/* SECCION nuevos lanzamientos ------------------------------------ */
-.nuevosLanzamientos{
-    margin-top: 5rem;
-    margin-bottom: 2rem;
-    margin-right: 2rem;    
-}
-.nuevosLanzamientosProductos{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;   
-    margin-bottom: 3rem;
-}
-
-/*.etiquetaNuevo { 
-    width: 81.184px;
-    height: 30px;
-} ESTE ESTILO NO ES NECESARIO PORQUE YA ESTÁ EN EL RESET*/
-
-.lanzamientosImg{
-    display: flex;
-    justify-content: flex-end;
-}
-.lanzamientosImg img{
-    width: 20rem;
-
-}
-.lanzamientosProductosN{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-}
-
-.nuevosLanzamientos h1{
-    color: #111;
-    font-family: Raleway;
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: uppercase;
-}
-.nuevosLanzamientos h2{
-    color: #111;
-    font-family: Inter;
-    font-size: 1.2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-.nuevosLanzamientos p{
-    color:#333;
-    font-family: Inter;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-.nuevosLanzamientos span{
-    color: #1D84B5;
-    font-family: Inter;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-.contenedorBotones{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-@media screen and (max-width:480px){
-
-    .imgBanner img{
-        height: 15em;
-    }
-    .descripcionBanner{
-        
-        display: flex;
-        text-align: center;
-        flex-direction: column;
-        align-items: center;
-        margin: 0%;
-    }
-    .descripcionBanner h2{
-        font-size: 2rem;
-    }
-
-    .descripcionBanner p {
-        font-size: 1.1rem;
-        width: 80%;
-    }
-    .descripcionBanner button {
-        width: 10rem;
-        height: 2.5rem;
-        border-radius: 3rem;
-        font-size: 1.2rem;
-    }
-    /* productos.........................................*/
-    .productos{
-        width: auto;
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-    .producto1 {
-        flex-wrap: wrap;
-    }
-    .imgProducto1 img{
-        width: 100%;
-    }
-    .descripcionProducto1{
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .descripcionProducto1 h2{
-        font-size: 1.5rem;
-
-    }
-    .descripcionProducto1 p{
-        font-size: 1rem;
-        width: auto;
-    }
-    .descripcionProducto1 img{
-        width: 85%;
-        height: 2rem;
-    }
-    .descripcionProducto1 button{
-        width: 8rem;
-        height: 40px;
-        font-size: .7rem;
-    }
-    .producto2 {
-        flex-wrap: wrap;
-    }
-    .imgProducto2 img{
-        width: 100%;
-    }
-    .descripcionProducto2{
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .descripcionProducto2 h2{
-        font-size: 1.5rem;
-    }
-    .descripcionProducto2 p{
-        font-size: 1rem;
-        width: 100%;
-    }
-    .descripcionProducto2 img{
-        width: 100%;
-        height: 2rem;
-    }
-    .descripcionProducto2 button{
-        width: 8rem;
-        height: 40px;
-        font-size: .7rem;
-    }
-    .producto3 {
-        flex-wrap: wrap;
-    }
-    .imgProducto3 img{
-        width: 100%;
-        margin-left: 0;
-    }
-    .descripcionProducto3{
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .descripcionProducto3 img{
-        width: 80%;
-        height: 2rem;
-    }
-    .descripcionProducto3 h2{
-        font-size: 1.5rem;
-    }
-    .descripcionProducto3 p{
-        font-size: 1rem;
-    }
-    .descripcionProducto3 button{
-        width: 8rem;
-        height: 40px;
-        font-size: .7rem;
-    }
-    
-       /* ultimos Lanzamientos.......................................*/
-  
-    .nuevosLanzamientos h2{
-        margin-top: 2em;
-        font-size: 1.1rem;
-        text-align: center;
-    }
-    .nuevosLanzamientosProductos{
-        display: flex;
-        justify-content: center;
-    }
-    .nuevosLanzamientosProductos1 img p {
-        position: absolute;
- 
-    }
-    .lanzamientosDescripcion p{
-        font-size: .9rem;
-        
-
-    }
+.collection__link:hover {
+    background-color: var(--primary-900);
 }
