@@ -1,9 +1,13 @@
 /* CSS en el archivo styles.css */
 
 main {
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 20px;
+    align-items: right;
+    color: #333;
+}
+
+#h1, h2 {
+    border-bottom: 5px solid var(--primary-solid);
 }
 
 section, #resumenColumna, .encabezadoCarrito {
@@ -15,7 +19,15 @@ section, #resumenColumna, .encabezadoCarrito {
 }
 
 .columna {
-    width: 200px !important;
+    width: 200px;
+}
+
+.columna1 {
+    width: 100px !important;
+}
+
+.columna5 {
+    width: 25px !important;
 }
 
 #resumenColumna {
@@ -28,26 +40,31 @@ section, #resumenColumna, .encabezadoCarrito {
 }
 
 /* Estilos generales para el contenedor del carrito */
-.encabezadoCarrito {
-    display: flex;
-    width: 1000px;
-    height: 3.1875rem;
-    flex-shrink: 0;
-    gap: 10px;
-    margin-bottom: 20px;
-    padding: 10px;
-    font-weight: bold;
-}
-
-/* Estilos generales para los productos en el carrito */
+.encabezadoCarrito,
 .productoCarrito {
     display: flex;
     width: 1000px;
-    height: 12.0625rem;
-    padding: 1rem;
     justify-content: space-between;
+    padding: 1rem;
+}
+
+.encabezadoCarrito {
+    height: 3.1875rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #000;
+    font-family: Inter;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;    
+    display: flex;
     align-items: center;
-    flex-shrink: 0;
+}
+
+.productoCarrito {
+    height: 12.0625rem;
+    align-items: center;
 }
 
 /* Estilos para la imagen del producto */
@@ -55,7 +72,7 @@ section, #resumenColumna, .encabezadoCarrito {
   max-width: 100px;
   max-height: 100px;
   display: block;
-  margin: 0 auto;
+  margin: 0;
 }
 
 /* Estilos para la descripción del producto */
@@ -74,6 +91,15 @@ section, #resumenColumna, .encabezadoCarrito {
   font-weight: bold;
 }
 
+.total-cell {
+    
+    font-family: Inter;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 /* Estilos para el icono de eliminar producto */
 .productoEliminar .itemEliminator {
   max-width: 20px;
@@ -85,11 +111,6 @@ section, #resumenColumna, .encabezadoCarrito {
 .productoInfo {
     display: flex;
     align-items: center;
-}
-
-.productoInfo img {
-    max-width: 100px;
-    margin-right: 20px;
 }
 
 .productoCantidad input {
@@ -108,13 +129,35 @@ section, #resumenColumna, .encabezadoCarrito {
     cursor: pointer;
 }
 
+.productName, .productFranchise, .productPrice {
+    font-family: Inter;
+    line-height: normal;
+    font-style: normal;    
+}
+
+.productName {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.productFranchise {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.productPrice {
+font-size: 0.875rem;
+font-weight: 400;
+}
+
+
 /*RESUMEN*/
 
 #resumenH2 {
     display: inline-flex;
     padding-bottom: 0px;
     align-items: center;
-    gap: 0.625rem; border-bottom: 5px solid #F33;
+    gap: 0.625rem;
     margin-bottom: 10px;
 }
 
