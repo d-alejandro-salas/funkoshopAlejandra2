@@ -17,6 +17,25 @@ form {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 2rem;
+}
+
+.form__label {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__input {
+    color: #B9B9B9;
+    text-align: left;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.04rem;
+    border:none;
+    border-bottom: 2px solid var(--primary-solid);
 }
 
 label {
@@ -28,6 +47,7 @@ label {
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.06rem;
+    margin-right: 2rem;
 }
 
 #remember {
@@ -42,27 +62,53 @@ label {
 h1, h2 {text-align: center;}
 
 h2 {
+    margin-top: 2rem;
     color: #1F1F1F;
     font-family: Raleway;
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.08rem;
 }
 
+.formulario {
+    width: 50%;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.botonPlusInput{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
 .cartelitoRojo {
     width: 6.43719rem;
     height: 2.44138rem;
     flex-shrink: 0;
-    margin: 0;
-    justify-content: center;
-    align-items: center;
     font-family: Inter;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    display: flex;
-    font-size: var(--font-xsmall);
+    font-size: 1.2rem;
     padding: var(--spacing-8) var(--spacing-12);
+    margin-right: 3rem;
+    scale: 1.2;
+}
+
+.botonPlusInput__checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.botonPlusInput__label {
+    margin-left: .7rem;
+}
+
+.textoCeleste {
+    font-size: inherit;
 }
