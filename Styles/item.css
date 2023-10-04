@@ -17,6 +17,19 @@
   margin-bottom: 10px; /* Puedes ajustar el valor según tus preferencias */
 }
 
+.botones {
+  display: flex;
+  flex-direction: column;
+}
+.botones .item__quantity {
+  background: #4F4F4F;
+  width: 1.3rem;
+  height: 1.3rem;
+  align-items: center;
+  flex-shrink: 0;
+  color: #FFF;
+}
+
 .item__cart {
   display: flex;
 }
