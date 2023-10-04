@@ -1,8 +1,0 @@
-# Ignorar todos los archivos .json en todas las carpetas
-**/*.json
-
-# Ignorar todos los archivos .scss en todas las carpetas
-**/*.scss
-
-# Ignorar todos los archivos .map en todas las carpetas
-**/*.map
