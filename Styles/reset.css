@@ -1,3 +1,6 @@
+@import url(https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css);
+@import url(https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css);
+
 :root {
     /*PALETTE */
 
@@ -139,10 +142,21 @@ button {
     font-size: var(--font-display);
 }
 
-.slider__items {
-    display: flex;
-    gap: var(--spacing-24);
+iconify-icon {
+    color: var(--dark-bg-solid);
+    font-size: var(--font-small);
+    font-weight: 700;
 }
+
+.glide_arrow--left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+/*ACÁ TERMINA SLIDER*/
 
 .card-item__cover {
     display: flex;

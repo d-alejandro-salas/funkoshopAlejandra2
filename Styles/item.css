@@ -21,6 +21,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .botones .item__quantity {
   background: #4F4F4F;
   width: 1.3rem;
