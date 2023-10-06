@@ -32,10 +32,26 @@
                 <p class="item__description">Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.</p>
                 <p class="card-item__price">$ 1.799,99</p>
                 <div class="item__cart">
-                    <button class="item__quantity" type="button">-</button>
-                    <input class="item__input" type="text" placeholder="0">
-                     <button class="item__quantity" type="button">+</button>
-                     <button class="cartelitoRojo etiquetaNuevo item__submit" type="submit">Agregar al Carrito</button>
+                    <button class="item__quantity" name="quantity" id="subtract" type="button">-</button>
+                    <input id="quantity" class="item__input" type="text" placeholder="0">
+                    <button class="item__quantity" name="quantity" id="add" type="button">+</button>
+                    <button class="cartelitoRojo etiquetaNuevo item__submit" type="submit">Agregar al Carrito</button>
+                    <script>
+                        const quantity = document.getElementById('quantity');
+                        const add = document.getElementById('add');
+                        const subtract = document.getElementById('subtract');
+
+                        add.addEventListener('click', () => {
+                          quantity.value = Number(quantity.value) + 1;
+                        });
+
+                        subtract.addEventListener('click', () => {
+                          const currentValue = Number(quantity.value);
+                          if (currentValue > 0) {
+                            quantity.value = currentValue - 1;
+                          }
+                        });
+                    </script>
                 </div>
                 <p class="card-item__promo textoCeleste"><a href="#" ><u>Ver metodos de pago</u></a>- 3 CUOTAS SIN INTERÉS</p>
             </article>
@@ -100,22 +116,7 @@
               </div>
         </section>
         <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-        <script>
-            new Glide('.glide', {
-                type: 'carousel',
-                startAt: 0,
-                perView: 3,
-                gap: 30,
-                breakpoint: {
-                    991: {
-                        perView: 2
-                    },
-                    768: {
-                        perView: 1
-                    }
-                }
-            }).mount();
-        </script>
+        <script src="Scripts/slider.js"></script>
     </main>
 </body>
 </html>

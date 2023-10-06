@@ -33,9 +33,28 @@
 
 .item__cart {
   display: flex;
+  gap: 1rem;
 }
 .item__cart .item__submit {
   position: relative;
 }
 
-/*# sourceMappingURL=item.css.map */
+.item__quantity {
+  width: 2.5rem;
+  background: black;
+  color: #FFF;
+  font-size: 1.5rem; /* Cambia el tamaño de letra según tus preferencias */
+  font-weight: bold; /* Hace el texto en negrita */
+}
+
+#quantity {
+  font-size: 1.5rem; /* Cambia el tamaño de letra según tus preferencias */
+  font-weight: bold;
+}
+
+.item__input {
+  text-align: center;
+  width: 6.59169rem;
+  flex-shrink: 0;
+  border: 1px solid black;
+}
